@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet"  href="./multistyles/index.css">
+  
+  <title>Frontend Mentor | Tic Tac Toe</title>
+</head>
+<body>
+
+  <!-- Multi player -->
+  
+  <img src="./assets/logo.svg" class="imgposition">
+  <div class="gwidth">
+    <img src="./assets/icon-x.svg" class="x">
+    <img src="./assets/icon-o.svg" class="o">
+    <p>Turn</p>
+  </div> 
+  <div class="icon-restart"><img src="./assets/icon-restart.svg" class="imgsize_3"></div>
+
+<div class="board">
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cell" data-cell></div>
+  <div class="cellresult1"><p class="position">X (You)</p>
+    <p class="res1"></p>
+  </div>
+  <div class="cellresult2"><p class="position">Ties</p>
+    <p class="res2"></p> </div>
+  <div class="cellresult3"><p class="position">O (CPU)</p>
+    <p class="res3"></p>
+  </div>
+</div>
+  
+<div class="win-message" id="winmessage1" ><p class="word">O NO, YOU LOST...</p><p></p>
+  <img src="./assets/icon-o.svg" class="owins"><p id="color1">TAKES THE ROUND</p>
+  <a href="./index.html"><div id="quit">QUIT</div></a>
+  <a><div id="next">NEXT ROUND</div></a>
+</div>
+<div class="win-message" id="winmessage2" ><p class="word">YOU WON!</p><p></p>
+  <img src="./assets/icon-x.svg" class="xwins"><p id="color2">TAKES THE ROUND</p>
+  <a href="./index.html"><div id="quit">QUIT</div></a>
+  <a><div id="next">NEXT ROUND</div></a>
+</div>
+<div class="win-message" id="winmessage3" ><p class="word3">ROUND TIED</p>
+  <a href="./index.html"><div id="quit3">QUIT</div></a>
+  <a><div id="next3">NEXT ROUND</div></a>
+</div>
+<script src="./cpumain.js">
+</script>
+</body>
+</html>
