@@ -14,90 +14,6 @@ const winningCombination = [
   [2, 4, 6],
 ];
 let xTurn;
-let userImage;
-let cpuImage;
-const cellElements = document.querySelectorAll("[data-cell]");
-const xCountElement = document.querySelector(".res1");
-const oCountElement = document.querySelector(".res3");
-const tieCountElement = document.querySelector(".res2");
-const restart = document.querySelector(".icon-restart");
-
-startGame();
-
-restart.addEventListener("click", restartGame);
-
-function restartGame() {
-  cellElements.forEach((cell) => {
-    cell.innerHTML = "";
-  });
-  userImage = "";
-  cpuImage = "";
-}
-
-function startGame() {
-  xTurn = true;
-  userImage = "x";
-  cpuImage = "o";
-  cellElements.forEach((cell) => {
-    cell.addEventListener("click", handleClick, { once: true });
-    cell.innerHTML = "";
-    cell.classList.remove("winning-x", "winning-o");
-  });
-
-  setBoardHover();
-}
-
-function handleClick(e) {
-  const cell = e.target;
-  const currentPlayer = xTurn ? userImage : cpuImage;
-  placeGameMark(cell, currentPlayer);
-
-  if (checkWin(currentPlayer)) {
-    endGame(currentPlayer);
-  } else if (isBoardFull()) {
-    endGame();
-  } else {
-    switchTurn();
-    if (!xTurn) {
-      setTimeout(makeCPUMove, 20);
-    }
-  }
-}
-
-function placeGameMark(cell, currentPlayer) {
-  cell.innerHTML = `<img src="./assets/icon-${currentPlayer}.svg" style="height: 30px; width: 30px;">`;
-}
-
-function switchTurn() {
-  xTurn = !xTurn;
-  if (xTurn) {
-    userImage = "x";
-    cpuImage = "o";
-  } else {
-    userImage = "o";
-    cpuImage = "x";
-  }
-}
-
-// Rest of the code remains unchanged
-// ...
-
-/*const x_Turn = "x";
-const o_Turn = "o";
-let xCount = 0;
-let oCount = 0;
-let tieCount = 0;
-const winningCombination = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6],
-];
-let xTurn;
 const cellElements = document.querySelectorAll("[data-cell]");
 const xCountElement = document.querySelector(".res1");
 const oCountElement = document.querySelector(".res3");
@@ -150,7 +66,7 @@ function placeGameMark(cell, currentPlayer) {
 
 function switchTurn() {
   xTurn = !xTurn;
-}  */
+}  
 
 function handleMouseOver(e) {
   const cell = e.target;
