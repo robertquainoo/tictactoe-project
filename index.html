@@ -8,51 +8,25 @@
   <link rel="stylesheet"  href="./styles/index.css">
   
   <title>Frontend Mentor | Tic Tac Toe</title>
-  <script>
-    function loadCPUplayerPage() {
-      window.location.href = "cpuplayer.html";
-    }
-    function loadMultiplayerPage() {
-      window.location.href = "multiplayer.html";
-    }
-    function highlightDiv() {
-    const div1 = document.getElementById("div1");
-    const imgsize_1 = document.querySelector(".imgsize_1");
-    const imgsize_2 = document.querySelector(".imgsize_2");
-    div1.style.display = "none";
-    imgsize_1.style.filter = "grayscale(100%) brightness(100%)";
-    imgsize_2.style.pointerEvents = "none";
-}
-function highlightDivI() {
-    const div1 = document.getElementById("div2");
-    const imgsize_1 = document.querySelector(".imgsize_2");
-    const imgsize_2 = document.querySelector(".imgsize_1");
-    div1.style.display = "none";
-    imgsize_1.style.filter = "grayscale(1)";
-    imgsize_2.style.pointerEvents = "none";
-}
-
-  </script>
 </head>
-
 <body>
-
-  <!-- New game menu start -->
-  
-  <img src="./assets/logo.svg" class="imgposition">
-  <div class="gwidth">
+  <div class = "turnoffhomepage">
+  <img src="./assets/logo.svg" class="homeimgposition">
+  <div class="homegwidth">
     <p>Pick player 1's mark</p>
-    <div class="bgcolor_1">
-      <div id="div1"></div><div id="div2"></div>
-      <img src="./assets/icon-x.svg" class="imgsize_1" onclick="highlightDiv()">
-    <img src="./assets/icon-o.svg" class="imgsize_2" onclick="highlightDivI()">
+    <div class="homebgcolor_1">
+      <div id="homediv1"></div><div id="homediv2"></div>
+      <img src="./assets/icon-x.svg" class="homeimgsize_1">
+    <img src="./assets/icon-o.svg" class="homeimgsize_2">
     </div>
     
-    <p id="remX">Remember: X goes first</p>
+    <p id="homeremX">Remember: X goes first</p>
   </div> 
-  <div class="ng_width1" onclick ="loadCPUplayerPage()">New Game (vs CPU)</div></a>
+  <div class="homeng_width1 newgameCPU">New Game (vs CPU)</div></a>
     
-   <div class="ng_width2" id ="ng_color" onclick="loadMultiplayerPage()">New Game (vs player)</div> 
-
+   <div class="homeng_width2 newgameplayers" id ="homeng_color">New Game (vs player)</div> 
+</div>
 </body>
+<script src="./main.js">
+</script>
 </html>
