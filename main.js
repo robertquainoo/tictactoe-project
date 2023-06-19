@@ -61,7 +61,6 @@ newGamePlayers.addEventListener('click', function() {
   }
 });
 
-// CPU functionalities //
 function clickNewCPU() {
   newGamePage('X (YOU)', "O (CPU)");
   const x_Turn = "x";
@@ -359,7 +358,6 @@ function nextRound() {
 
 }
 
-// Two Players Functionalities //
 function clickNewPlayers() {
   newGamePage('X (P2)', "O (P1)");
 const x_Turn = "x";
@@ -668,8 +666,6 @@ cellResult3.appendChild(res3);
 document.body.appendChild(container);
 
 }
-
-//Winning or draw messages highlights //
 
 function createWinMessage(options) {
   const { id, wordText, imgSrc, colorText, hasQuit, hasNext } = options;
