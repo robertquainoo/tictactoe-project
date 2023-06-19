@@ -736,11 +736,7 @@ function createRestartMessage() {
   word.classList.add('word3');
   word.textContent = 'RESTART GAME?';
   restartMessage.appendChild(word);
-
-  if (id === 'winmessage3') {
-    word.style.fontSize = '30px';
-  }
-
+    
   const continueDiv = document.createElement('div');
   continueDiv.id = 'continue_game';
   continueDiv.textContent = 'NO, CANCEL';
